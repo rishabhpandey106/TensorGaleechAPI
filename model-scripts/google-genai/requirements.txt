@@ -1,0 +1,4 @@
+tensorflow
+numpy
+flask
+langchain_google_genai

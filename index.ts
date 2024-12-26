@@ -56,7 +56,7 @@ class AI {
     model.add(
       tf.layers.dense({
         units: 3,
-        inputShape: [384], // Adjust this to match the size of your embeddings
+        inputShape: [768], // Adjust this to match the size of your embeddings
       })
     );
 
@@ -80,7 +80,7 @@ class AI {
   async run() {
     const model = this.compile();
 
-    const data = await parseCSV("prepared_dataset.csv", 0, 45000);
+    const data = await parseCSV("datad.csv", 0, 45000);
 
     const converted = data.map((row) => ({
       embedding: JSON.parse(row.embedding), // Embedding should now be parsed correctly
@@ -98,7 +98,7 @@ class AI {
     });
 
     // Save the model after training
-    await model.save("file://./profanity-model");
+    await model.save("file://./profanity-model-v2");
   }
 }
 
