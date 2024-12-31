@@ -1,0 +1,7 @@
+76ms 146us/step - acc=0.870 loss=0.441
+Precision: Tensor
+    0.6936026811599731
+Recall: Tensor
+    0.7357142567634583
+F1 Score: Tensor
+    0.714038074016571
